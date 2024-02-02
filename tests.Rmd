@@ -1,0 +1,109 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+
+```{r, include= FALSE}
+library(tidyverse)
+```
+
+
+```{r}
+#| include: false
+df <- tibble(
+  Day = 1:100,
+  Matt = rpois(100, lambda = 37),
+  Ash = rpois(100, lambda = 40),
+  Jacki = rpois(100, lambda = 25),
+  Rol = rpois(100, lambda = 54),
+  Mike = rpois(100, lambda = 16)
+)
+
+```
+
+
+
+```{r}
+# Test 1
+set.seed(111)
+
+df <- tibble(
+  Day = 1:100,
+  Matt = rpois(100, lambda = 37),
+  Ash = rpois(100, lambda = 40),
+  Jacki = rpois(100, lambda = 25),
+  Rol = rpois(100, lambda = 54),
+  Mike = rpois(100, lambda = 16)
+)
+
+df
+```
+
+
+```{r}
+# Test 2
+set.seed(222)
+
+df <- tibble(
+  Day = 1:100,
+  Matt = rpois(100, lambda = 37),
+  Ash = rpois(100, lambda = 40),
+  Jacki = rpois(100, lambda = 25),
+  Rol = rpois(100, lambda = 54),
+  Mike = rpois(100, lambda = 16)
+)
+
+df
+```
+
+
+```{r}
+# Test 3
+set.seed(333)
+
+df <- tibble(
+  Day = 1:100,
+  Matt = rpois(100, lambda = 37),
+  Ash = rpois(100, lambda = 40),
+  Jacki = rpois(100, lambda = 25),
+  Rol = rpois(100, lambda = 54),
+  Mike = rpois(100, lambda = 16)
+)
+
+df
+```
+
+```{r}
+# Test 4
+set.seed(444)
+
+df <- tibble(
+  Day = 1:100,
+  Matt = rpois(100, lambda = 37),
+  Ash = rpois(100, lambda = 40),
+  Jacki = rpois(100, lambda = 25),
+  Rol = rpois(100, lambda = 54),
+  Mike = rpois(100, lambda = 16)
+)
+
+df
+```
+
+```{r}
+# Test 5
+set.seed(555)
+
+df <- tibble(
+  Day = 1:100,
+  Matt = rpois(100, lambda = 37),
+  Ash = rpois(100, lambda = 40),
+  Jacki = rpois(100, lambda = 25),
+  Rol = rpois(100, lambda = 54),
+  Mike = rpois(100, lambda = 16)
+)
+
+df
+```
