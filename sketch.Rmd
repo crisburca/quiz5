@@ -1,0 +1,40 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r, include= FALSE}
+library(tidyverse)
+```
+
+
+```{r}
+# Set the seed for reproducibility
+set.seed(123)
+
+# Generate data
+
+#assume Matt and Ash are a couple, similar lambda
+##Ash reads slightly faster than Matt
+
+df <- tibble(
+  Day = 1:100,
+  Matt = rpois(100, lambda = 37),
+  Ash = rpois(100, lambda = 40),
+  Jacki = rpois(100, lambda = 25),
+  Rol = rpois(100, lambda = 54),
+  Mike = rpois(100, lambda = 16)
+)
+
+df
+```
+
+```{r}
+df_long <- df %>% pivot_longer(cols = -Day, names_to = "Person", values_to = "Value")
+
+# Plot the data
+ggplot(df_long, aes(x = Day, y = Value, color = Person)) +
+  geom_line() +
+  labs(x = "Day", y = "Value", title = "Pages Read over 100 Days") +
+  theme_minimal()
+```
